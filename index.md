@@ -1,6 +1,6 @@
 ---
 layout: home
-permalink:
+# permalink:
 ---
 
 <h1>Blog Posts</h1>
