@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-04-21T04:43:50+05:30</updated><id>/feed.xml</id><title type="html">Blogs</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><author><name>Brahamjot Singh</name></author><entry><title type="html">14 April - 15 April</title><link href="/2025/04/15/week5.html" rel="alternate" type="text/html" title="14 April - 15 April" /><published>2025-04-15T00:00:00+05:30</published><updated>2025-04-15T00:00:00+05:30</updated><id>/2025/04/15/week5</id><content type="html" xml:base="/2025/04/15/week5.html"><![CDATA[<h1 id="task-completed-system-interface-design">Task Completed: System Interface Design</h1>
+
+<p>With the core model in place, the next step was to make the system accessible to end-users. A basic yet functional user interface was developed to allow image uploads and verification.</p>
+
+<h2 id="key-features-implemented">Key Features Implemented:</h2>
+
+<ul>
+  <li><strong>Image Upload Functionality</strong>: Users can upload images through the interface.</li>
+  <li><strong>Model Integration</strong>: Uploaded images are processed and passed to the trained model for classification (Real or Fake).</li>
+  <li><strong>Result Display</strong>: Classification result is displayed along with a confidence score.</li>
+  <li><strong>Backend</strong>: Implemented using <strong>Flask</strong> (Python micro web framework).</li>
+  <li><strong>Frontend</strong>: Simple <strong>HTML/CSS</strong> interface for usability and quick testing.</li>
+</ul>
+
+<p>This interface can serve as a prototype for future deployment in a web application or forensic software.</p>]]></content><author><name>Brahamjot Singh</name></author><summary type="html"><![CDATA[Task Completed: System Interface Design]]></summary></entry><entry><title type="html">12 April - 13 April</title><link href="/2025/04/13/week4.html" rel="alternate" type="text/html" title="12 April - 13 April" /><published>2025-04-13T00:00:00+05:30</published><updated>2025-04-13T00:00:00+05:30</updated><id>/2025/04/13/week4</id><content type="html" xml:base="/2025/04/13/week4.html"><![CDATA[<h1 id="task-completed-model-training-and-transfer-learning">Task Completed: Model Training and Transfer Learning</h1>
+
+<p>This week was focused on training the selected CNN model using the collected and preprocessed datasets. The process involved:</p>
+
+<h2 id="data-splitting">Data Splitting:</h2>
+<ul>
+  <li>The dataset was divided into:
+    <ul>
+      <li><strong>Training</strong>: 70%</li>
+      <li><strong>Validation</strong>: 15%</li>
+      <li><strong>Testing</strong>: 15%</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="transfer-learning">Transfer Learning:</h2>
+<ul>
+  <li>Used pre-trained <strong>ResNet50</strong> weights.</li>
+  <li>Fine-tuned the final layers for our specific deepfake classification task.</li>
+</ul>
+
+<h2 id="training-parameters">Training Parameters:</h2>
+<ul>
+  <li><strong>Learning Rate</strong>: 0.0001</li>
+  <li><strong>Optimizer</strong>: Adam</li>
+  <li><strong>Loss Function</strong>: Binary Cross-Entropy</li>
+  <li><strong>Epochs</strong>: 20 (initial testing)</li>
+  <li><strong>Batch Size</strong>: 32</li>
+</ul>
+
+<p>The model was trained using <strong>TensorFlow/Keras</strong>, and training progress was monitored through <strong>loss</strong> and <strong>accuracy</strong> metrics.<br />
+<strong>Early stopping</strong> and <strong>model checkpointing</strong> techniques were applied to avoid overfitting and preserve the best-performing model.</p>
+
+<p>The training results showed encouraging performance, with <strong>accuracy reaching above 90%</strong> on the validation dataset after tuning.</p>]]></content><author><name>Brahamjot Singh</name></author><summary type="html"><![CDATA[Task Completed: Model Training and Transfer Learning]]></summary></entry><entry><title type="html">8 April - 11 April</title><link href="/2025/04/11/week3.html" rel="alternate" type="text/html" title="8 April - 11 April" /><published>2025-04-11T00:00:00+05:30</published><updated>2025-04-11T00:00:00+05:30</updated><id>/2025/04/11/week3</id><content type="html" xml:base="/2025/04/11/week3.html"><![CDATA[<h1 id="task-completed-model-selection---cnn-architecture">Task Completed: Model Selection - CNN Architecture</h1>
+
+<p>During this week, focus was shifted to the selection of an appropriate deep learning model for deepfake image classification. After comparative analysis of various architectures, <strong>Convolutional Neural Networks (CNNs)</strong> were chosen due to their efficiency in spatial feature extraction from images.</p>
+
+<h2 id="models-evaluated">Models Evaluated:</h2>
+
+<ul>
+  <li><strong>VGG16</strong>: Simple and effective but relatively heavy in terms of parameters.</li>
+  <li><strong>ResNet50</strong>: Introduced residual connections to solve vanishing gradient problems in deep networks.</li>
+  <li><strong>EfficientNetB0</strong>: Lightweight and high-performing; considered for later optimization.</li>
+</ul>
+
+<h2 id="final-model-chosen">Final Model Chosen:</h2>
+
+<p>Initially, <strong>ResNet50</strong> was selected for transfer learning because of its balance between performance and computational efficiency. It allowed us to leverage pre-trained <strong>ImageNet</strong> weights while fine-tuning on our specific deepfake dataset.</p>]]></content><author><name>Brahamjot Singh</name></author><summary type="html"><![CDATA[Task Completed: Model Selection - CNN Architecture]]></summary></entry><entry><title type="html">3 April - 7 April</title><link href="/2025/04/07/week2.html" rel="alternate" type="text/html" title="3 April - 7 April" /><published>2025-04-07T00:00:00+05:30</published><updated>2025-04-07T00:00:00+05:30</updated><id>/2025/04/07/week2</id><content type="html" xml:base="/2025/04/07/week2.html"><![CDATA[<h1 id="task-completed-dataset-collection-and-preprocessing">Task Completed: Dataset Collection and Preprocessing</h1>
+
+<p>The second week was dedicated to the collection and preprocessing of datasets for training the deep learning model. The datasets collected included:</p>
+
+<ul>
+  <li><strong>FaceForensics++</strong></li>
+  <li><strong>DeepFake Detection Challenge (DFDC)</strong></li>
+  <li><strong>Celeb-DF v2</strong></li>
+  <li><strong>Kaggle Deepfake Datasets</strong> (various open-source collections)</li>
+</ul>
+
+<p>These datasets include both real and manipulated facial images, which are crucial for binary classification tasks (real vs. fake).</p>
+
+<h2 id="preprocessing-steps-involved">Preprocessing Steps Involved:</h2>
+
+<ul>
+  <li><strong>Resizing Images</strong> to a standard input size (e.g., 224x224 pixels) compatible with CNN architectures.</li>
+  <li><strong>Normalization</strong> of pixel values to bring them into a consistent range (0–1).</li>
+  <li><strong>Augmentation Techniques</strong> such as flipping, rotating, zooming, and color jittering were applied to artificially expand the dataset and reduce overfitting.</li>
+  <li><strong>Class Balancing</strong> was considered to ensure equal representation of real and fake images, helping in better model generalization.</li>
+</ul>
+
+<p>All preprocessing steps were implemented using Python libraries such as <strong>OpenCV</strong> and <strong>TensorFlow/Keras</strong> preprocessing modules.</p>]]></content><author><name>Brahamjot Singh</name></author><summary type="html"><![CDATA[Task Completed: Dataset Collection and Preprocessing]]></summary></entry><entry><title type="html">27 March - 2 April</title><link href="/2025/04/02/week1.html" rel="alternate" type="text/html" title="27 March - 2 April" /><published>2025-04-02T00:00:00+05:30</published><updated>2025-04-02T00:00:00+05:30</updated><id>/2025/04/02/week1</id><content type="html" xml:base="/2025/04/02/week1.html"><![CDATA[<h1 id="task-completed-literature-review">Task Completed: Literature Review</h1>
+
+<p>During the first week of the project, an extensive literature review was conducted to understand the foundations of deepfake technology and the current state of deepfake detection methods. The review focused on two major aspects:</p>
+
+<h2 id="1-deepfake-generation-techniques">1. Deepfake Generation Techniques</h2>
+
+<ul>
+  <li>Studied how Generative Adversarial Networks (GANs), Variational Autoencoders (VAEs), and face-swapping algorithms are used to generate deepfake images.</li>
+  <li>Reviewed different models such as <strong>DeepFakes</strong>, <strong>Face2Face</strong>, and <strong>StyleGAN</strong> which have been widely used in synthetic image generation.</li>
+  <li>Identified the evolving nature of these techniques, making detection increasingly difficult.</li>
+</ul>
+
+<h2 id="2-deepfake-detection-approaches">2. Deepfake Detection Approaches</h2>
+
+<ul>
+  <li>Analyzed existing detection techniques, especially those using traditional forensic tools like metadata and watermark analysis.</li>
+  <li>Found that these traditional methods are largely ineffective due to the high quality and realism of AI-generated content.</li>
+  <li>Focused on deep learning approaches, particularly <strong>Convolutional Neural Networks (CNNs)</strong>, which analyze inconsistencies in textures, lighting, and facial symmetry.</li>
+</ul>
+
+<p>Relevant research papers, conference publications, and existing datasets were referred to for this review. The literature review helped in identifying key limitations of current systems and laid a strong foundation for the model development phase.</p>]]></content><author><name>Brahamjot Singh</name></author><summary type="html"><![CDATA[Task Completed: Literature Review]]></summary></entry></feed>
