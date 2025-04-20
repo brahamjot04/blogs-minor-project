@@ -1,14 +1,14 @@
 ---
 layout: home 
-permalink: 
+# permalink: 
 ---
 <h1>Blog Posts</h1>
 
-<ul>
+<!-- <ul> -->
   {% assign sorted_posts = site.posts | sort: 'date' %}
   {% for post in sorted_posts %}
-    <li>
+    <!-- <li> -->
       <a href="{{ post.url }}">{{ post.title }}</a> - {{ post.date | date: "%B %d, %Y" }}
-    </li>
+    <!-- </li> -->
   {% endfor %}
-</ul>
+<!-- </ul> -->
